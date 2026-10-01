@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="334cde46-8f2f-4ad0-a4cc-25a40f0e8df6" name="Changes" comment="Tests added">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dockerfile" afterDir="false" />
+    <list default="true" id="334cde46-8f2f-4ad0-a4cc-25a40f0e8df6" name="Changes" comment="added docker">
+      <change afterPath="$PROJECT_DIR$/alerts/services.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alerts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/alerts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alerts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/alerts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alerts/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/alerts/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/celery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trackers/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/trackers/tasks.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1790594205611</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added docker">
+      <option name="closed" value="true" />
+      <created>1790770378877</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1790770378877</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -143,7 +154,8 @@
     <MESSAGE value="todo resolved" />
     <MESSAGE value="Added models, rest api, celery, redis for alerts and tracker apps" />
     <MESSAGE value="Tests added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests added" />
+    <MESSAGE value="added docker" />
+    <option name="LAST_COMMIT_MESSAGE" value="added docker" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
