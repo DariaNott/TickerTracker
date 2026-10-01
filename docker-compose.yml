@@ -56,6 +56,18 @@ services:
     depends_on:
       - db
       - redis
+  bot:
+    build: .
+    command: python bot.py
+    volumes:
+      - .:/app
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/tickertracker
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - db
+      - web
 
 volumes:
   postgres_data:

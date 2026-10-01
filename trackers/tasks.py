@@ -2,12 +2,23 @@ from celery import shared_task
 import yfinance as yf
 from alerts.models import PriceAlert
 from trackers.models import Ticker, PriceHistory
-from django.utils import timezone
 from decimal import Decimal
 import logging
 from alerts.services import send_telegram_notification
 
 logger = logging.getLogger(__name__)
+
+CURRENCY_SYMBOLS = {
+    'USD': '$',
+    'EUR': '€',
+    'GBP': '£',
+    'GBp': 'p',
+    'UAH': '₴',
+    'PLN': 'zł',
+    'CAD': 'CA$',
+    'JPY': '¥',
+}
+
 
 @shared_task
 def check_ticker_price():
@@ -30,8 +41,8 @@ def check_ticker_price():
 
             for alert in alerts:
                 condition_met = (
-                    (alert.condition == 'ABOVE' and price >= alert.target_price) or
-                    (alert.condition == 'BELOW' and price <= alert.target_price)
+                        (alert.condition == 'ABOVE' and price >= alert.target_price) or
+                        (alert.condition == 'BELOW' and price <= alert.target_price)
                 )
 
                 if condition_met:
@@ -39,11 +50,15 @@ def check_ticker_price():
                     alert.save()
 
                     if alert.telegram_chat_id:
+                        currency_code = data.fast_info.get('currency', 'USD')
+                        curr_symbol = CURRENCY_SYMBOLS.get(currency_code, f"{currency_code}")
+
+                        cond_str = "Вище" if alert.condition == "ABOVE" else "Нижча"
                         msg = (
                             f"🚨 <b>Ціна змінилася!</b>\n\n"
                             f"📈 Тікер: <b>{ticker.symbol}</b>\n"
-                            f"💵 Поточна ціна: <b>${price:.2f}</b>\n"
-                            f"🎯 Цільова ціна: <b>${alert.target_price:.2f}</b> ({alert.condition})"
+                            f"💵 Поточна ціна: <b>{curr_symbol}{price:.2f}</b>\n"
+                            f"🎯 Цільова ціна: <b>{cond_str} за {curr_symbol}{alert.target_price:.2f}</b>"
                         )
                         send_telegram_notification(alert.telegram_chat_id, msg)
 
