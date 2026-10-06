@@ -80,7 +80,7 @@ CURRENCY_SYMBOLS = {
     'UAH': '₴',
     'PLN': 'zł',
     'CAD': 'CA$',
-    'JPY': '¥',
+    'JPY': '¥'
 }
 
 
