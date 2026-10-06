@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="334cde46-8f2f-4ad0-a4cc-25a40f0e8df6" name="Changes" comment="telegram bot functions extended">
-      <change afterPath="$PROJECT_DIR$/tests/test_alerts_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_bot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_services.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_trackers_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_api.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trackers/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/trackers/tests.py" afterDir="false" />
+    <list default="true" id="334cde46-8f2f-4ad0-a4cc-25a40f0e8df6" name="Changes" comment="tests added">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1790856855462</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="tests added">
+      <option name="closed" value="true" />
+      <created>1791285964287</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1791285964287</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -174,7 +175,8 @@
     <MESSAGE value="added docker" />
     <MESSAGE value="telegram integration implemented" />
     <MESSAGE value="telegram bot functions extended" />
-    <option name="LAST_COMMIT_MESSAGE" value="telegram bot functions extended" />
+    <MESSAGE value="tests added" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests added" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
